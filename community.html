@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Community - Udyam Yukti</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ================================
+           COMMUNITY PAGE
+           ================================ */
+
+        .community-page {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 35px 30px 60px;
+        }
+
+        .community-heading {
+            margin-bottom: 28px;
+        }
+
+        .community-heading h1 {
+            margin: 0;
+            color: #f40707;
+            font-size: 30px;
+        }
+
+        .community-heading p {
+            margin: 8px 0 0;
+            color: #68756f;
+            font-size: 15px;
+        }
+
+        /* Hero */
+
+        .community-hero {
+            background: #f4ead8;
+            border-radius: 22px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(39, 55, 48, 0.07);
+        }
+
+        .community-hero h2 {
+            margin: 0 0 10px;
+            color: #234b3e;
+            font-size: 22px;
+        }
+
+        .community-hero p {
+            margin: 0;
+            color: #596861;
+            font-size: 14px;
+            line-height: 1.75;
+            max-width: 800px;
+        }
+
+        /* Community Stats */
+
+        .community-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .community-stat {
+            background: #fff;
+            border: 1px solid #e5e7e2;
+            border-radius: 17px;
+            padding: 20px;
+            box-shadow: 0 6px 18px rgba(39, 55, 48, 0.05);
+        }
+
+        .community-stat strong {
+            display: block;
+            color: #234b3e;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .community-stat span {
+            color: #718078;
+            font-size: 13px;
+        }
+
+        /* Main Grid */
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 22px;
+        }
+
+        .community-card {
+            background: #fff;
+            border: 1px solid #e5e7e2;
+            border-radius: 21px;
+            padding: 25px;
+            box-shadow: 0 7px 20px rgba(39, 55, 48, 0.055);
+        }
+
+        .community-card h2 {
+            margin: 0 0 18px;
+            color: #234b3e;
+            font-size: 20px;
+        }
+
+        /* Business People */
+
+        .business-person {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eceee9;
+        }
+
+        .business-person:last-child {
+            border-bottom: none;
+        }
+
+        .person-avatar {
+            width: 47px;
+            height: 47px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: #234b3e;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .person-info {
+            flex: 1;
+        }
+
+        .person-info h3 {
+            margin: 0 0 4px;
+            color: #294c40;
+            font-size: 15px;
+        }
+
+        .person-info p {
+            margin: 0;
+            color: #748079;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .connect-btn {
+            border: none;
+            background: #523dc8;
+            color: #fff;
+            padding: 9px 14px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .connect-btn:hover {
+            background: #2f6653;
+        }
+
+        /* Help Section */
+
+        .help-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .help-item {
+            padding: 15px;
+            background: #f8f8f4;
+            border: 1px solid #e8e9e3;
+            border-radius: 13px;
+        }
+
+        .help-item h3 {
+            margin: 0 0 5px;
+            color: #294c40;
+            font-size: 14px;
+        }
+
+        .help-item p {
+            margin: 0;
+            color: #69756f;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* Join Community */
+
+        .join-community {
+            margin-top: 22px;
+            background: #bdba09;
+            color: #fff;
+            border-radius: 21px;
+            padding: 28px;
+        }
+
+        .join-community h2 {
+            margin: 0 0 9px;
+            font-size: 21px;
+        }
+
+        .join-community p {
+            margin: 0 0 18px;
+            color: rgba(255, 255, 255, 0.80);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .join-btn {
+            display: inline-block;
+            border: none;
+            background: #f4ead8;
+            color: #234b3e;
+            padding: 12px 20px;
+            border-radius: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        /* Notice */
+
+        .community-notice {
+            margin-top: 22px;
+            padding: 17px 20px;
+            border-radius: 15px;
+            background: #f8f8f4;
+            border: 1px solid #e5e7e2;
+            color: #68756f;
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+        /* Back */
+
+        .community-actions {
+            margin-top: 25px;
+        }
+
+        .back-dashboard {
+            display: inline-block;
+            background: #234b3e;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 850px) {
+
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .community-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .community-page {
+                padding: 75px 16px 40px;
+            }
+
+            .community-heading h1 {
+                font-size: 25px;
+            }
+
+            .community-hero,
+            .community-card,
+            .join-community {
+                padding: 21px;
+            }
+
+            .business-person {
+                align-items: flex-start;
+            }
+
+            .connect-btn {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================
+     SIDEBAR
+     ================================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">
+                <img src="dlogo.png" alt="Udyam Yukti Logo">
+            </div>
+
+            <div>
+                <h2>Udyam Yukti</h2>
+                <span>Smart Business Saathi</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-homepage-32.png" alt="Home">
+                </div>
+                <span>Home</span>
+            </a>
+
+            <a href="profile.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-profile-50 (1).png" alt="My Profile">
+                </div>
+                <span>My Profile</span>
+            </a>
+
+            <a href="business-ideas.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-business-idea-66.png" alt="Business Ideas">
+                </div>
+                <span>Business Ideas</span>
+            </a>
+
+            <a href="learning-hub.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-learning-50.png" alt="Learning Hub">
+                </div>
+                <span>Learning Hub</span>
+            </a>
+
+            <a href="community.html" class="sidebar-item active">
+                <div class="sidebar-icon">
+                    <img src="icons8-community-64.png" alt="Community">
+                </div>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button onclick="logoutUser()" class="sidebar-logout">
+                <span>↪</span>
+                Logout
+            </button>
+        </div>
+
+    </aside>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+
+
+    <!-- =================================
+     MAIN CONTENT
+     ================================= -->
+
+    <main class="community-page">
+
+        <div class="community-heading">
+            <h1>Community</h1>
+            <p>अपने आसपास के business owners से जुड़ें और एक-दूसरे की मदद करें</p>
+        </div>
+
+
+        <!-- HERO -->
+
+        <section class="community-hero">
+
+            <h2>Local Business Community</h2>
+
+            <p>
+                अपने इलाके के दूसरे उद्यमियों के साथ जुड़कर business से जुड़ी
+                जानकारी, अनुभव और ideas share करें। एक-दूसरे की मदद से
+                local business community को मजबूत बनाया जा सकता है।
+            </p>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="community-stats">
+
+            <div class="community-stat">
+                <strong>Local</strong>
+                <span>अपने इलाके के business owners</span>
+            </div>
+
+            <div class="community-stat">
+                <strong>Help</strong>
+                <span>Business knowledge और अनुभव share करें</span>
+            </div>
+
+            <div class="community-stat">
+                <strong>Connect</strong>
+                <span>नए लोगों और businesses से जुड़ें</span>
+            </div>
+
+        </section>
+
+
+        <!-- MAIN -->
+
+        <section class="community-grid">
+
+            <!-- Business Owners -->
+
+            <div class="community-card">
+
+                <h2>👥 Business Owners</h2>
+
+                <div class="business-person">
+
+                    <div class="person-avatar">R</div>
+
+                    <div class="person-info">
+                        <h3>Local Grocery Business</h3>
+                        <p>किराना • Local Business Owner</p>
+                    </div>
+
+                    <button class="connect-btn" onclick="connectBusiness(this)">
+                        Connect
+                    </button>
+
+                </div>
+
+
+                <div class="business-person">
+
+                    <div class="person-avatar">S</div>
+
+                    <div class="person-info">
+                        <h3>Dairy Business</h3>
+                        <p>डेयरी • Local Business Owner</p>
+                    </div>
+
+                    <button class="connect-btn" onclick="connectBusiness(this)">
+                        Connect
+                    </button>
+
+                </div>
+
+
+                <div class="business-person">
+
+                    <div class="person-avatar">A</div>
+
+                    <div class="person-info">
+                        <h3>Poultry Business</h3>
+                        <p>मुर्गी पालन • Local Business Owner</p>
+                    </div>
+
+                    <button class="connect-btn" onclick="connectBusiness(this)">
+                        Connect
+                    </button>
+
+                </div>
+
+
+                <div class="business-person">
+
+                    <div class="person-avatar">M</div>
+
+                    <div class="person-info">
+                        <h3>Clothing Business</h3>
+                        <p>कपड़ों की दुकान • Local Business Owner</p>
+                    </div>
+
+                    <button class="connect-btn" onclick="connectBusiness(this)">
+                        Connect
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Help -->
+
+            <div class="community-card">
+
+                <h2>💬 Community में क्या करें?</h2>
+
+                <div class="help-list">
+
+                    <div class="help-item">
+                        <h3>💡 Business Ideas Share करें</h3>
+                        <p>
+                            अपने business experience और नए ideas दूसरे
+                            entrepreneurs के साथ share करें।
+                        </p>
+                    </div>
+
+                    <div class="help-item">
+                        <h3>🛒 Market Information</h3>
+                        <p>
+                            Local market में demand, customers और products
+                            से जुड़ी जानकारी share करें।
+                        </p>
+                    </div>
+
+                    <div class="help-item">
+                        <h3>🤝 एक-दूसरे की मदद करें</h3>
+                        <p>
+                            Business से जुड़ी सामान्य समस्याओं और अनुभवों
+                            पर एक-दूसरे की मदद करें।
+                        </p>
+                    </div>
+
+                    <div class="help-item">
+                        <h3>📈 Growth सीखें</h3>
+                        <p>
+                            Business को बेहतर तरीके से चलाने और बढ़ाने
+                            के अनुभव share करें।
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOIN -->
+
+        <section class="join-community">
+
+            <h2>🌱 Community से जुड़ें</h2>
+
+            <p>
+                अपना business community में जोड़कर दूसरे local entrepreneurs
+                के साथ networking शुरू करें।
+            </p>
+
+            <button class="join-btn" onclick="joinCommunity()">
+                अपना Business जोड़ें
+            </button>
+
+        </section>
+
+
+        <div class="community-notice">
+            <strong>Prototype Note:</strong>
+            अभी यह Community section demo/prototype रूप में है।
+            Real-time business owners, messaging और actual connections
+            के लिए बाद में backend/database जोड़ना होगा।
+        </div>
+
+
+        <div class="community-actions">
+
+            <a href="dashboard.html" class="back-dashboard">
+                ← Home पर जाएं
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        /* Sidebar */
+
+        function toggleSidebar() {
+
+            const sidebar = document.getElementById("sidebar");
+
+            if (sidebar) {
+                sidebar.classList.toggle("show");
+            }
+
+        }
+
+
+        /* Logout */
+
+        function logoutUser() {
+
+            window.location.href = "index.html";
+
+        }
+
+
+        /* Connect */
+
+        function connectBusiness(button) {
+
+            button.textContent = "Connected ✓";
+            button.disabled = true;
+
+            button.style.opacity = "0.75";
+
+        }
+
+
+        /* Join Community */
+
+        function joinCommunity() {
+
+            alert(
+                "Community registration feature जल्द जोड़ा जाएगा।"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

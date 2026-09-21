@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Ideas - Udyam Yukti</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =================================
+           BUSINESS IDEAS PAGE
+           ================================= */
+
+        .business-page {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 35px 30px 60px;
+        }
+
+        .business-heading {
+            margin-bottom: 28px;
+        }
+
+        .business-heading h1 {
+            margin: 0;
+            color: #f40707;
+            font-size: 30px;
+        }
+
+        .business-heading p {
+            margin: 8px 0 0;
+            color: #68756f;
+            font-size: 15px;
+        }
+
+        /* Intro */
+
+        .business-intro {
+            background: #f4ead8;
+            border-radius: 22px;
+            padding: 25px 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 24px rgba(39, 55, 48, 0.07);
+        }
+
+        .business-intro h2 {
+            margin: 0 0 8px;
+            color: #234b3e;
+            font-size: 21px;
+        }
+
+        .business-intro p {
+            margin: 0;
+            color: #596861;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* Business Grid */
+
+        .business-grid {
+            display: block;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .business-card {
+            background: #fff;
+            border: 1px solid #e5e7e2;
+            border-radius: 20px;
+            padding: 23px;
+            box-shadow: 0 7px 20px rgba(39, 55, 48, 0.06);
+            transition: 0.25s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(39, 55, 48, 0.10);
+            border-color: #cbd8d1;
+        }
+
+        .business-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 11px;
+            background: #234b3e;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .business-card h3 {
+            margin: 0 0 8px;
+            color: #234b3e;
+            font-size: 19px;
+        }
+
+        .business-card .business-subtitle {
+            color: #7b857f;
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+
+        .business-card ul {
+            margin: 0;
+            padding-left: 19px;
+        }
+
+        .business-card li {
+            color: #53615a;
+            font-size: 14px;
+            line-height: 1.65;
+            margin-bottom: 7px;
+        }
+
+        /* Before Starting */
+
+        .before-start {
+            margin-top: 30px;
+            background: #234b3e;
+            color: #fff;
+            border-radius: 22px;
+            padding: 28px;
+            box-shadow: 0 10px 25px rgba(35, 75, 62, 0.15);
+        }
+
+        .before-start h2 {
+            margin: 0 0 13px;
+            font-size: 21px;
+        }
+
+        .before-start p {
+            margin: 0 0 14px;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .before-start ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .before-start li {
+            color: rgba(255, 255, 255, 0.88);
+            line-height: 1.7;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+
+        /* Back Button */
+
+        .business-actions {
+            margin-top: 25px;
+        }
+
+        .back-dashboard {
+            display: inline-block;
+            background: #234b3e;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .back-dashboard:hover {
+            background: #2f6653;
+            transform: translateY(-1px);
+        }
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .business-page {
+                padding: 75px 16px 40px;
+            }
+
+            .business-heading h1 {
+                font-size: 25px;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .business-intro,
+            .business-card,
+            .before-start {
+                padding: 21px;
+            }
+        }
+
+        .sidebar-menu {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 7px !important;
+        }
+
+        .sidebar-item {
+            display: flex !important;
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================
+     SIDEBAR
+     ================================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">
+                <img src="dlogo.png" alt="Udyam Yukti Logo">
+            </div>
+
+            <div>
+                <h2>Udyam Yukti</h2>
+                <span>Smart Business Saathi</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-homepage-32.png" alt="Home">
+                </div>
+                <span>Home</span>
+            </a>
+
+            <a href="profile.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-profile-50 (1).png" alt="My Profile">
+                </div>
+                <span>My Profile</span>
+            </a>
+
+            <a href="business-ideas.html" class="sidebar-item active">
+                <div class="sidebar-icon">
+                    <img src="icons8-business-idea-66.png" alt="Business Ideas">
+                </div>
+                <span>Business Ideas</span>
+            </a>
+
+            <a href="learning-hub.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-learning-50.png" alt="Learning Hub">
+                </div>
+                <span>Learning Hub</span>
+            </a>
+
+            <a href="community.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-community-64.png" alt="Community">
+                </div>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button onclick="logoutUser()" class="sidebar-logout">
+                <span>↪</span>
+                Logout
+            </button>
+        </div>
+
+    </aside>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+
+
+    <!-- =================================
+     MAIN CONTENT
+     ================================= -->
+
+    <main class="business-page">
+
+        <div class="business-heading">
+            <h1>Business Ideas</h1>
+            <p>गाँव और छोटे शहरों में शुरू किए जा सकने वाले बिज़नेस आइडिया</p>
+        </div>
+
+
+        <section class="business-intro">
+
+            <h2>अपना बिज़नेस आइडिया चुनें</h2>
+
+            <p>
+                हर बिज़नेस शुरू करने से पहले अपने इलाके की जरूरत,
+                उपलब्ध संसाधन, अपनी रुचि और बजट को जरूर समझें।
+                नीचे दिए गए आइडिया आपको शुरुआत के लिए एक दिशा दे सकते हैं।
+            </p>
+
+        </section>
+
+
+        <section class="business-grid">
+
+            <!-- 1 -->
+
+            <article class="business-card">
+
+                <div class="business-number">01</div>
+
+                <h3>Mill Business</h3>
+
+                <div class="business-subtitle">
+                    आटा / मसाला / अनाज मिल
+                </div>
+
+                <ul>
+                    <li>गाँव में अनाज और आटा की लगातार जरूरत रहती है।</li>
+                    <li>स्थानीय किसानों और ग्राहकों से जुड़कर काम किया जा सकता है।</li>
+                    <li>मशीन और बिजली की जरूरत के अनुसार शुरुआत करें।</li>
+                    <li>पहले स्थानीय बाजार की मांग समझें।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 2 -->
+
+            <article class="business-card">
+
+                <div class="business-number">02</div>
+
+                <h3>Poultry Farming</h3>
+
+                <div class="business-subtitle">
+                    मुर्गी पालन
+                </div>
+
+                <ul>
+                    <li>अंडे और चिकन की स्थानीय मांग को समझें।</li>
+                    <li>छोटे स्तर से शुरुआत करके धीरे-धीरे बढ़ाया जा सकता है।</li>
+                    <li>मुर्गियों के लिए साफ और सुरक्षित जगह रखें।</li>
+                    <li>चारा, पानी और देखभाल की नियमित व्यवस्था करें।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 3 -->
+
+            <article class="business-card">
+
+                <div class="business-number">03</div>
+
+                <h3>Organic Farming</h3>
+
+                <div class="business-subtitle">
+                    जैविक खेती
+                </div>
+
+                <ul>
+                    <li>स्थानीय मांग के अनुसार सब्जियाँ और फसलें चुनें।</li>
+                    <li>जैविक तरीके से खेती करने की जानकारी लें।</li>
+                    <li>उत्पाद की गुणवत्ता पर ध्यान दें।</li>
+                    <li>स्थानीय ग्राहकों और बाजार से सीधे जुड़ने की कोशिश करें।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 4 -->
+
+            <article class="business-card">
+
+                <div class="business-number">04</div>
+
+                <h3>Grocery / Kirana Store</h3>
+
+                <div class="business-subtitle">
+                    किराना दुकान
+                </div>
+
+                <ul>
+                    <li>रोजमर्रा की जरूरत का सामान उपलब्ध कराएं।</li>
+                    <li>अपने इलाके में कौन-सा सामान ज्यादा बिकता है, देखें।</li>
+                    <li>स्टॉक और रोज की बिक्री का हिसाब रखें।</li>
+                    <li>ग्राहकों के साथ अच्छा व्यवहार और उचित कीमत रखें।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 5 -->
+
+            <article class="business-card">
+
+                <div class="business-number">05</div>
+
+                <h3>Jute Bag Business</h3>
+
+                <div class="business-subtitle">
+                    जूट बैग बनाना
+                </div>
+
+                <ul>
+                    <li>जूट से अलग-अलग तरह के बैग बनाए जा सकते हैं।</li>
+                    <li>स्थानीय दुकानों और बाजार में बिक्री की जा सकती है।</li>
+                    <li>डिजाइन और गुणवत्ता पर ध्यान दें।</li>
+                    <li>ऑर्डर के अनुसार उत्पादन बढ़ाया जा सकता है।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 6 -->
+
+            <article class="business-card">
+
+                <div class="business-number">06</div>
+
+                <h3>Dairy Farming</h3>
+
+                <div class="business-subtitle">
+                    डेयरी बिज़नेस
+                </div>
+
+                <ul>
+                    <li>दूध की स्थानीय मांग को समझें।</li>
+                    <li>पशुओं के लिए साफ और सुरक्षित जगह रखें।</li>
+                    <li>चारा और पानी की नियमित व्यवस्था जरूरी है।</li>
+                    <li>दूध को स्थानीय ग्राहकों या दुकानों तक पहुँचाया जा सकता है।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 7 -->
+
+            <article class="business-card">
+
+                <div class="business-number">07</div>
+
+                <h3>Candle Making</h3>
+
+                <div class="business-subtitle">
+                    मोमबत्ती बनाना
+                </div>
+
+                <ul>
+                    <li>छोटे स्तर से घर से शुरुआत की जा सकती है।</li>
+                    <li>अलग-अलग डिजाइन और आकार की मोमबत्तियाँ बनाई जा सकती हैं।</li>
+                    <li>त्योहारों और विशेष अवसरों पर मांग बढ़ सकती है।</li>
+                    <li>स्थानीय दुकानों और ऑनलाइन माध्यम से बिक्री की जा सकती है।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 8 -->
+
+            <article class="business-card">
+
+                <div class="business-number">08</div>
+
+                <h3>Clothing Store</h3>
+
+                <div class="business-subtitle">
+                    कपड़ों की दुकान
+                </div>
+
+                <ul>
+                    <li>इलाके के लोगों की जरूरत के अनुसार कपड़े रखें।</li>
+                    <li>महिलाओं, बच्चों और पुरुषों के लिए अलग-अलग विकल्प रखें।</li>
+                    <li>त्योहार और मौसम के अनुसार स्टॉक बदलें।</li>
+                    <li>कीमत और गुणवत्ता का सही संतुलन रखें।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 9 -->
+
+            <article class="business-card">
+
+                <div class="business-number">09</div>
+
+                <h3>Fruits & Vegetable Shop</h3>
+
+                <div class="business-subtitle">
+                    फल और सब्जियों की दुकान
+                </div>
+
+                <ul>
+                    <li>ताजा और साफ फल-सब्जियाँ उपलब्ध कराएं।</li>
+                    <li>स्थानीय किसानों से सामान लेने का विकल्प देखें।</li>
+                    <li>रोज की मांग के अनुसार सामान खरीदें।</li>
+                    <li>खराब होने वाले सामान का स्टॉक ज्यादा न रखें।</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 10 -->
+
+            <article class="business-card">
+
+                <div class="business-number">10</div>
+
+                <h3>Fertilizer & Seeds Store</h3>
+
+                <div class="business-subtitle">
+                    खाद और बीज की दुकान
+                </div>
+
+                <ul>
+                    <li>स्थानीय किसानों की जरूरत को समझें।</li>
+                    <li>फसल और मौसम के अनुसार मांग बदल सकती है।</li>
+                    <li>सही जानकारी और उचित उत्पाद उपलब्ध कराएं।</li>
+                    <li>जरूरी लाइसेंस और नियमों की जानकारी लेकर ही शुरुआत करें।</li>
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- Before Starting -->
+
+        <section class="before-start">
+
+            <h2>🌱 Business Start Karne Se Pehle</h2>
+
+            <p>
+                बिज़नेस शुरू करने से पहले कुछ जरूरी बातों को समझना
+                आपको नुकसान से बचाने और सही शुरुआत करने में मदद कर सकता है।
+            </p>
+
+            <ul>
+                <li>अपने गाँव और आसपास के इलाके में लोगों की जरूरत समझें।</li>
+                <li>देखें कि उस बिज़नेस की मांग कितनी है।</li>
+                <li>कुल खर्च और अपनी उपलब्ध रकम का हिसाब लगाएं।</li>
+                <li>जरूरत पड़ने पर लोन या सरकारी सहायता की जानकारी लें।</li>
+                <li>छोटे स्तर से शुरुआत करके अनुभव के साथ बिज़नेस बढ़ाएं।</li>
+                <li>रोज की कमाई और खर्च का हिसाब जरूर रखें।</li>
+            </ul>
+
+        </section>
+
+
+        <div class="business-actions">
+            <a href="dashboard.html" class="back-dashboard">
+                ← Home पर जाएं
+            </a>
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+
+            if (sidebar) {
+                sidebar.classList.toggle("show");
+            }
+        }
+
+        function logoutUser() {
+            window.location.href = "index.html";
+        }
+
+    </script>
+
+</body>
+
+</html>

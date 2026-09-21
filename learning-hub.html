@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Hub - Udyam Yukti</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =================================
+           LEARNING HUB
+           ================================= */
+
+        .learning-page {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 35px 30px 60px;
+        }
+
+        .learning-heading {
+            margin-bottom: 28px;
+        }
+
+        .learning-heading h1 {
+            margin: 0;
+            color: #f40707;
+            font-size: 30px;
+        }
+
+        .learning-heading p {
+            margin: 8px 0 0;
+            color: #68756f;
+            font-size: 15px;
+        }
+
+        /* Intro */
+
+        .learning-intro {
+            background: #f4ead8;
+            border-radius: 22px;
+            padding: 26px 28px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(39, 55, 48, 0.07);
+        }
+
+        .learning-intro h2 {
+            margin: 0 0 9px;
+            color: #234b3e;
+            font-size: 22px;
+        }
+
+        .learning-intro p {
+            margin: 0;
+            color: #596861;
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        /* Section */
+
+        .learning-section {
+            background: #fff;
+            border: 1px solid #e5e7e2;
+            border-radius: 21px;
+            padding: 26px;
+            margin-bottom: 20px;
+            box-shadow: 0 7px 20px rgba(39, 55, 48, 0.055);
+        }
+
+        .learning-section h2 {
+            margin: 0 0 10px;
+            color: #234b3e;
+            font-size: 21px;
+        }
+
+        .learning-section>p {
+            color: #596861;
+            font-size: 14px;
+            line-height: 1.75;
+            margin: 0 0 17px;
+        }
+
+        /* Steps */
+
+        .learning-steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .learning-step {
+            background: #f8f8f4;
+            border: 1px solid #e8e9e3;
+            border-radius: 16px;
+            padding: 19px;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #234b3e;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 13px;
+        }
+
+        .learning-step h3 {
+            margin: 0 0 8px;
+            color: #294c40;
+            font-size: 17px;
+        }
+
+        .learning-step p {
+            margin: 0;
+            color: #637069;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Points */
+
+        .learning-points {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .learning-points li {
+            color: #596861;
+            font-size: 14px;
+            line-height: 1.75;
+            margin-bottom: 8px;
+        }
+
+        /* Two columns */
+
+        .learning-two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* Benefits */
+
+        .benefit-card {
+            background: #f8f8f4;
+            border: 1px solid #e6e8e1;
+            border-radius: 17px;
+            padding: 20px;
+        }
+
+        .benefit-card h3 {
+            margin: 0 0 8px;
+            color: #234b3e;
+            font-size: 17px;
+        }
+
+        .benefit-card p {
+            margin: 0;
+            color: #65716b;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Challenges */
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .challenge-card {
+            padding: 18px;
+            background: #f8f8f4;
+            border-radius: 15px;
+            border: 1px solid #e7e8e2;
+        }
+
+        .challenge-card h3 {
+            margin: 0 0 7px;
+            color: #234b3e;
+            font-size: 15px;
+        }
+
+        .challenge-card p {
+            margin: 0;
+            color: #68746e;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Final Advice */
+
+        .final-advice {
+            background: #234b3e;
+            color: #fff;
+            border-radius: 22px;
+            padding: 29px;
+            margin-top: 28px;
+            box-shadow: 0 10px 25px rgba(35, 75, 62, 0.15);
+        }
+
+        .final-advice h2 {
+            margin: 0 0 11px;
+            font-size: 21px;
+        }
+
+        .final-advice p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Back */
+
+        .learning-actions {
+            margin-top: 25px;
+        }
+
+        .back-dashboard {
+            display: inline-block;
+            background: #234b3e;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .back-dashboard:hover {
+            background: #2f6653;
+            transform: translateY(-1px);
+        }
+
+        /* Mobile */
+
+        @media (max-width: 850px) {
+
+            .learning-steps,
+            .learning-two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .challenge-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .learning-page {
+                padding: 75px 16px 40px;
+            }
+
+            .learning-heading h1 {
+                font-size: 25px;
+            }
+
+            .learning-intro,
+            .learning-section,
+            .final-advice {
+                padding: 21px;
+            }
+
+            .challenge-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================
+     SIDEBAR
+     ================================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">
+                <img src="dlogo.png" alt="Udyam Yukti Logo">
+            </div>
+            <div>
+                <h2>Udyam Yukti</h2>
+                <span>Smart Business Saathi</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-homepage-32.png" alt="Home">
+                </div>
+                <span>Home</span>
+            </a>
+
+            <a href="profile.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-profile-50 (1).png" alt="My Profile">
+                </div>
+                <span>My Profile</span>
+            </a>
+
+            <a href="business-ideas.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-business-idea-66.png" alt="Business Ideas">
+                </div>
+                <span>Business Ideas</span>
+            </a>
+
+            <a href="learning-hub.html" class="sidebar-item active">
+                <div class="sidebar-icon">
+                    <img src="icons8-learning-50.png" alt="Learning Hub">
+                </div>
+                <span>Learning Hub</span>
+            </a>
+
+            <a href="community.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-community-64.png" alt="Community">
+                </div>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button onclick="logoutUser()" class="sidebar-logout">
+                <span>↪</span>
+                Logout
+            </button>
+        </div>
+
+    </aside>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+
+
+    <!-- =================================
+     MAIN CONTENT
+     ================================= -->
+
+    <main class="learning-page">
+
+        <div class="learning-heading">
+            <h1>Learning Hub</h1>
+            <p>बिज़नेस शुरू करने और आगे बढ़ाने की आसान जानकारी</p>
+        </div>
+
+
+        <!-- INTRO -->
+
+        <section class="learning-intro">
+
+            <h2>गाँव में Business कैसे शुरू करें?</h2>
+
+            <p>
+                गाँव में बिज़नेस शुरू करना एक अच्छा अवसर हो सकता है,
+                अगर शुरुआत करने से पहले स्थानीय जरूरत, उपलब्ध संसाधन,
+                खर्च और ग्राहकों को समझ लिया जाए। सही योजना के साथ
+                छोटा बिज़नेस धीरे-धीरे बढ़ाया जा सकता है।
+            </p>
+
+        </section>
+
+
+        <!-- STEP BY STEP -->
+
+        <section class="learning-section">
+
+            <h2>Business शुरू करने के 5 Steps</h2>
+
+            <p>
+                शुरुआत से पहले इन जरूरी steps को समझें।
+            </p>
+
+            <div class="learning-steps">
+
+                <div class="learning-step">
+
+                    <div class="step-number">01</div>
+
+                    <h3>Business Idea Choose करें</h3>
+
+                    <p>
+                        ऐसा बिज़नेस चुनें जिसकी आपके गाँव या आसपास
+                        के इलाके में जरूरत हो। अपनी रुचि, अनुभव,
+                        उपलब्ध संसाधन और बजट को भी ध्यान में रखें।
+                    </p>
+
+                </div>
+
+
+                <div class="learning-step">
+
+                    <div class="step-number">02</div>
+
+                    <h3>पैसों का इंतज़ाम करें</h3>
+
+                    <p>
+                        बिज़नेस शुरू करने में कितना खर्च आएगा,
+                        इसका पहले अंदाजा लगाएं। अपनी बचत के साथ
+                        जरूरत पड़ने पर उपलब्ध loan या government
+                        support की जानकारी लें।
+                    </p>
+
+                </div>
+
+
+                <div class="learning-step">
+
+                    <div class="step-number">03</div>
+
+                    <h3>Documents / Legal जानकारी लें</h3>
+
+                    <p>
+                        अपने बिज़नेस के लिए जरूरी registration,
+                        license और documents की जानकारी पहले लें।
+                        बिज़नेस के अनुसार नियम अलग हो सकते हैं।
+                    </p>
+
+                </div>
+
+
+                <div class="learning-step">
+
+                    <div class="step-number">04</div>
+
+                    <h3>Basic Setup तैयार करें</h3>
+
+                    <p>
+                        जगह, सामान, मशीन, बिजली, पानी और दूसरे
+                        जरूरी resources की व्यवस्था करें। शुरुआत
+                        जरूरत के हिसाब से रखें।
+                    </p>
+
+                </div>
+
+
+                <div class="learning-step">
+
+                    <div class="step-number">05</div>
+
+                    <h3>Business शुरू करें</h3>
+
+                    <p>
+                        छोटे स्तर से शुरुआत करें। ग्राहकों की प्रतिक्रिया
+                        समझें, रोज की बिक्री और खर्च का हिसाब रखें
+                        और धीरे-धीरे बिज़नेस को बढ़ाएं।
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY VILLAGE BUSINESS -->
+
+        <section class="learning-section">
+
+            <h2>🌾 गाँव में Business क्यों शुरू करें?</h2>
+
+            <ul class="learning-points">
+
+                <li>
+                    गाँव में रोजमर्रा की कई चीजों और सेवाओं की स्थानीय मांग होती है।
+                </li>
+
+                <li>
+                    कुछ बिज़नेस कम स्तर से शुरू किए जा सकते हैं।
+                </li>
+
+                <li>
+                    स्थानीय लोगों और किसानों से सीधे जुड़ने का अवसर मिलता है।
+                </li>
+
+                <li>
+                    स्थानीय resources और उपलब्ध जगह का उपयोग किया जा सकता है।
+                </li>
+
+                <li>
+                    आसपास के ग्राहकों की जरूरत समझकर बिज़नेस बनाया जा सकता है।
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- SUPPORT -->
+
+        <section class="learning-section">
+
+            <h2>🏛️ Government Schemes & Support</h2>
+
+            <p>
+                बिज़नेस शुरू करने से पहले अपने बिज़नेस और eligibility
+                के अनुसार उपलब्ध सरकारी योजनाओं और financial support
+                की जानकारी जरूर लें।
+            </p>
+
+            <ul class="learning-points">
+
+                <li>
+                    अपने राज्य और केंद्र सरकार की उपलब्ध योजनाओं की जानकारी लें।
+                </li>
+
+                <li>
+                    Loan और financial assistance की eligibility समझें।
+                </li>
+
+                <li>
+                    जरूरी documents पहले से तैयार रखें।
+                </li>
+
+                <li>
+                    आवेदन करने से पहले official information जरूर check करें।
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- COMMUNITY + GROWTH -->
+
+        <div class="learning-two-column">
+
+            <section class="learning-section">
+
+                <h2>🤝 Local Community Support</h2>
+
+                <p>
+                    गाँव में दूसरे business owners, किसानों और स्थानीय
+                    लोगों से जुड़ना useful हो सकता है।
+                </p>
+
+                <ul class="learning-points">
+
+                    <li>एक-दूसरे से business experience सीखें।</li>
+                    <li>स्थानीय suppliers और customers के बारे में जानकारी लें।</li>
+                    <li>जरूरत पड़ने पर एक-दूसरे की मदद करें।</li>
+                    <li>स्थानीय बाजार की जानकारी साझा करें।</li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="learning-section">
+
+                <h2>📈 Business Growth</h2>
+
+                <p>
+                    बिज़नेस शुरू होने के बाद growth के लिए लगातार
+                    customer feedback और daily records पर ध्यान दें।
+                </p>
+
+                <ul class="learning-points">
+
+                    <li>ग्राहकों की जरूरत समझें।</li>
+                    <li>Quality और service बेहतर करें।</li>
+                    <li>कमाई और खर्च का हिसाब रखें।</li>
+                    <li>मांग बढ़ने पर धीरे-धीरे विस्तार करें।</li>
+
+                </ul>
+
+            </section>
+
+        </div>
+
+
+        <!-- IMPORTANT POINTS -->
+
+        <section class="learning-section">
+
+            <h2>💰 शुरुआत से पहले ध्यान देने वाली बातें</h2>
+
+            <div class="learning-steps">
+
+                <div class="learning-step">
+
+                    <div class="step-number">01</div>
+
+                    <h3>कम लागत में शुरुआत</h3>
+
+                    <p>
+                        शुरुआत में जरूरत से ज्यादा पैसा लगाने के बजाय
+                        छोटा setup रखकर market को समझना उपयोगी हो सकता है।
+                    </p>
+
+                </div>
+
+
+                <div class="learning-step">
+
+                    <div class="step-number">02</div>
+
+                    <h3>Local Resources</h3>
+
+                    <p>
+                        अपने इलाके में उपलब्ध जमीन, raw material,
+                        skills और दूसरे resources का पता लगाएं।
+                    </p>
+
+                </div>
+
+
+                <div class="learning-step">
+
+                    <div class="step-number">03</div>
+
+                    <h3>Local Demand</h3>
+
+                    <p>
+                        लोगों से पूछें कि उन्हें किस सामान या service
+                        की जरूरत है। Demand समझकर idea चुनें।
+                    </p>
+
+                </div>
+
+
+                <div class="learning-step">
+
+                    <div class="step-number">04</div>
+
+                    <h3>Daily Record</h3>
+
+                    <p>
+                        रोज की बिक्री, खर्च और कमाई का record रखने से
+                        बिज़नेस की स्थिति समझने में मदद मिलती है।
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFITS -->
+
+        <section class="learning-section">
+
+            <h2>🌱 Village Business के फायदे</h2>
+
+            <div class="learning-two-column">
+
+                <div class="benefit-card">
+
+                    <h3>स्थानीय ग्राहक</h3>
+
+                    <p>
+                        आसपास रहने वाले लोगों की जरूरत को ध्यान में
+                        रखकर product या service दी जा सकती है।
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <h3>Local Resources</h3>
+
+                    <p>
+                        स्थानीय resources और उपलब्ध skills का उपयोग
+                        business में किया जा सकता है।
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <h3>कम दूरी</h3>
+
+                    <p>
+                        स्थानीय बाजार में काम करने से customers और
+                        suppliers के करीब रहना आसान हो सकता है।
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <h3>धीरे-धीरे Growth</h3>
+
+                    <p>
+                        छोटे स्तर से शुरुआत करके experience और demand
+                        के अनुसार business बढ़ाया जा सकता है।
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHALLENGES -->
+
+        <section class="learning-section">
+
+            <h2>⚠️ गाँव में Business की चुनौतियाँ</h2>
+
+            <p>
+                बिज़नेस शुरू करने से पहले इन चुनौतियों को समझना जरूरी है।
+            </p>
+
+            <div class="challenge-grid">
+
+                <div class="challenge-card">
+                    <h3>💰 Finance</h3>
+                    <p>
+                        शुरुआत के लिए पर्याप्त पैसा जुटाना चुनौती हो सकता है।
+                    </p>
+                </div>
+
+                <div class="challenge-card">
+                    <h3>🏗️ Infrastructure</h3>
+                    <p>
+                        बिजली, सड़क, इंटरनेट या दूसरी सुविधाएँ हर जगह समान नहीं होतीं।
+                    </p>
+                </div>
+
+                <div class="challenge-card">
+                    <h3>👨‍🔧 Skilled Workers</h3>
+                    <p>
+                        कुछ कामों के लिए trained workers मिलना मुश्किल हो सकता है।
+                    </p>
+                </div>
+
+                <div class="challenge-card">
+                    <h3>🌍 Market Reach</h3>
+                    <p>
+                        बड़े बाजार तक product पहुँचाना शुरुआत में चुनौती हो सकता है।
+                    </p>
+                </div>
+
+                <div class="challenge-card">
+                    <h3>📱 Technology</h3>
+                    <p>
+                        Digital tools और technology की जानकारी की जरूरत पड़ सकती है।
+                    </p>
+                </div>
+
+                <div class="challenge-card">
+                    <h3>📄 Registration</h3>
+                    <p>
+                        Documents, registration और paperwork को समझना जरूरी है।
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL ADVICE -->
+
+        <section class="final-advice">
+
+            <h2>🌱 Final Advice</h2>
+
+            <p>
+                एक अच्छा बिज़नेस सिर्फ idea से नहीं चलता।
+                Local demand समझना, सही planning करना, खर्च का हिसाब रखना,
+                customers को अच्छी service देना और समय के साथ सीखते रहना
+                भी जरूरी है। छोटे कदम से शुरुआत करें और experience के
+                साथ अपने business को आगे बढ़ाएं।
+            </p>
+
+        </section>
+
+
+        <div class="learning-actions">
+
+            <a href="dashboard.html" class="back-dashboard">
+                ← Home पर जाएं
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function toggleSidebar() {
+
+            const sidebar = document.getElementById("sidebar");
+
+            if (sidebar) {
+                sidebar.classList.toggle("show");
+            }
+
+        }
+
+
+        function logoutUser() {
+
+            window.location.href = "index.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

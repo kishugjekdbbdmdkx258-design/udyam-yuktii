@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Udyam Yukti - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module">
+    </script>
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">
+                <img src="dlogo.png" alt="Udyam Yukti Logo">
+            </div>
+
+            <div>
+                <h2>Udyam Yukti</h2>
+                <span>Smart Business Saathi</span>
+            </div>
+        </div>
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="sidebar-item active">
+                <div class="sidebar-icon">
+                    <img src="icons8-homepage-32.png" alt="Home">
+                </div>
+                <span>Home</span>
+            </a>
+
+            <a href="profile.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-profile-50 (1).png" alt="My Profile">
+                </div>
+                <span>My Profile</span>
+            </a>
+
+            <a href="business-ideas.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-business-idea-66.png" alt="Business Ideas">
+                </div>
+                <span>Business Ideas</span>
+            </a>
+
+            <a href="learning-hub.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-learning-50.png" alt="Learning Hub">
+                </div>
+                <span>Learning Hub</span>
+            </a>
+
+            <a href="community.html" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <img src="icons8-community-64.png" alt="Community">
+                </div>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button onclick="logoutUser()" class="sidebar-logout">
+                <span>↪</span>
+                Logout
+            </button>
+        </div>
+
+    </aside>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">
+        ☰
+    </button>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="brand-area">
+
+            <img src="dlogo.png" alt="Udyam Yukti Logo" class="brand-logo">
+
+            <div class="brand-text">
+                <h2>Udyam Yukti</h2>
+                <p>Smart Business Saathi</p>
+            </div>
+
+        </div>
+
+        <button class="logout-btn" onclick="logoutUser()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome-card">
+
+            <div class="welcome-content">
+
+                <h1 id="welcomeName">
+                    Namaste, Udyami Ji! 🙏
+                </h1>
+
+                <p id="userLocation">
+                    Aapke business ko grow karne ke liye
+                    neeche se koi option choose karein.
+                </p>
+
+            </div>
+
+            <img src="welcome-image.png" alt="Udyam Yukti illustration" class="welcome-pots">
+
+        </section>
+
+
+        <!-- ================= SECTION TITLE ================= -->
+
+        <h2 class="section-title">
+            आपको किस चीज में मदद चाहिए?
+        </h2>
+
+
+        <!-- ================= FEATURE GRID ================= -->
+
+        <section class="feature-grid">
+
+
+            <!-- AI BUSINESS ADVICE -->
+
+            <div class="feature-card" onclick="openAIChat()">
+
+                <div class="feature-image ai-image"></div>
+
+                <h3>
+                    व्यापार से जुड़ी सलाह /
+                    AI Business Advice
+                </h3>
+
+                <p>
+                    अपने व्यवसाय को आगे बढ़ाने के लिए
+                    सरल और उपयोगी सलाह पाएं।
+                </p>
+
+                <button type="button" onclick="event.stopPropagation(); openAIChat()">
+
+                    शुरू करें / Get Started
+
+                </button>
+
+            </div>
+
+
+            <!-- BUSINESS LOAN -->
+
+            <div class="feature-card" onclick="openFeature('Business Loan Advisory')">
+
+                <div class="feature-image loan-image"></div>
+
+                <h3>
+                    व्यवसाय लोन सहायता /
+                    Business Loan Advisory
+                </h3>
+
+                <p>
+                    पैसों, बजट, कमाई और खर्च की योजना बनाएं
+                </p>
+
+                <button type="button">
+                    योजना बनाएं / Create a Plan
+                </button>
+
+            </div>
+
+
+            <!-- GOVERNMENT SCHEMES -->
+
+            <div class="feature-card" onclick="openFeature('Government Schemes')">
+
+                <div class="feature-image scheme-image"></div>
+
+                <h3>
+                    सरकारी योजनाएं /
+                    Government Schemes
+                </h3>
+
+                <p>
+                    अपने व्यवसाय को आगे बढ़ाने के लिए
+                    सरकार की मदद और उपयोगी योजनाओं
+                    के बारे में जानें।
+                </p>
+
+                <button type="button">
+                    योजना देखें / View Schemes
+                </button>
+
+            </div>
+
+
+            <!-- LOCAL MARKET -->
+
+            <div class="feature-card" onclick="openFeature('Local Market')">
+
+                <div class="feature-image market-image"></div>
+
+                <h3>
+                    स्थानीय बाजार / Local Market
+                </h3>
+
+                <p>
+                    अपने आसपास के बाजार और ग्राहकों
+                    की जरूरतों को समझें
+                </p>
+
+                <button type="button">
+                    बाजार देखें / View Market
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- AI CHAT -->
+        <!-- ================================================= -->
+
+        <section id="aiChatBox" class="ai-chat-box" style="display:none;">
+
+
+            <!-- CHAT HEADER -->
+
+            <div class="ai-chat-header">
+
+                <div>
+
+                    <h2>
+                        🤖 विकास — Business Saathi
+                    </h2>
+
+                    <p>
+                        लिखकर या बोलकर अपना सवाल पूछें
+                    </p>
+
+                </div>
+
+
+                <button type="button" onclick="closeAIChat()" class="close-chat-btn">
+
+                    ✖
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= VOICE ASSISTANT ================= -->
+
+            <div class="voice-assistant-box">
+
+                <div class="voice-avatar">
+                    🤖
+                </div>
+
+                <div class="voice-content">
+
+                    <h3>
+                        🎙️ विकास से बात करें
+                    </h3>
+
+                    <p id="voiceStatus">
+                        Mic दबाकर अपना सवाल बोलें
+                    </p>
+
+                </div>
+
+
+                <button type="button" id="voiceButton" class="voice-button" onclick="startVoiceAssistant()">
+
+                    🎤
+
+                </button>
+
+            </div>
+
+
+            <!-- VOICE TIP -->
+
+            <div class="voice-tip">
+
+                💡 उदाहरण:
+                "मुझे ₹1 लाख में किराना दुकान शुरू करनी है,
+                क्या करूं?"
+
+            </div>
+
+
+            <!-- ================= BUSINESS ================= -->
+
+            <div class="business-category-box">
+
+                <label for="businessCategory">
+
+                    सबसे पहले अपना बिज़नेस चुनें:
+                    / Choose Your Business:
+
+                </label>
+
+
+                <select id="businessCategory">
+
+                    <option value="">
+                        अपना बिज़नेस चुनें / Choose Your Business
+                    </option>
+
+                    <option value="किराना दुकान">
+                        किराना दुकान / Grocery Store
+                    </option>
+
+                    <option value="चाय और नाश्ता">
+                        चाय और नाश्ता / Tea & Snacks
+                    </option>
+
+                    <option value="डेयरी बिज़नेस">
+                        डेयरी बिज़नेस / Dairy Business
+                    </option>
+
+                    <option value="सिलाई सेंटर">
+                        सिलाई सेंटर / Tailoring Center
+                    </option>
+
+                    <option value="मोबाइल रिपेयर">
+                        मोबाइल रिपेयर / Mobile Repair
+                    </option>
+
+                    <option value="खेती से जुड़ा बिज़नेस">
+                        खेती से जुड़ा बिज़नेस / Agriculture Business
+                    </option>
+
+                    <option value="मुर्गी पालन">
+                        मुर्गी पालन / Poultry Farming
+                    </option>
+
+                    <option value="बकरी पालन">
+                        बकरी पालन / Goat Farming
+                    </option>
+
+                    <option value="अन्य बिज़नेस">
+                        अन्य बिज़नेस / Other Business
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ================= BUDGET ================= -->
+
+            <div class="budget-category-box">
+
+                <label for="businessBudget">
+
+                    आपका कुल बजट कितना है?
+                    / Total Budget?
+
+                </label>
+
+
+                <select id="businessBudget">
+
+                    <option value="">
+                        अपना बजट चुनें / Choose Your Budget
+                    </option>
+
+                    <option value="10000">
+                        ₹10,000 तक
+                    </option>
+
+                    <option value="25000">
+                        ₹25,000 तक
+                    </option>
+
+                    <option value="50000">
+                        ₹50,000 तक
+                    </option>
+
+                    <option value="100000">
+                        ₹1,00,000 तक
+                    </option>
+
+                    <option value="200000">
+                        ₹2,00,000 तक
+                    </option>
+
+                    <option value="500000">
+                        ₹5,00,000 तक
+                    </option>
+
+                </select>
+
+
+                <p class="budget-note">
+
+                    यह अनुमानित बजट है।
+                    वास्तविक खर्च आपके स्थान और
+                    बिज़नेस के अनुसार बदल सकता है।
+
+                </p>
+
+            </div>
+
+
+            <!-- ================= CHAT MESSAGES ================= -->
+
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="bot-message">
+
+                    नमस्ते! 🙏
+                    मैं <b>विकास</b> हूँ, आपका Business Advisor।
+
+                    <br><br>
+
+                    पहले अपना बिज़नेस और बजट चुनें,
+                    फिर अपना सवाल लिखें या 🎤 बोलें।
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= QUICK QUESTIONS ================= -->
+
+            <div class="quick-questions">
+
+                <button type="button" onclick="askQuickQuestion('इस बिज़नेस में ग्राहक कैसे बढ़ाएं?')">
+
+                    ग्राहक कैसे बढ़ाएं?
+
+                </button>
+
+
+                <button type="button" onclick="askQuickQuestion('इस बिज़नेस में मुनाफा कैसे बढ़ाएं?')">
+
+                    मुनाफा कैसे बढ़ाएं?
+
+                </button>
+
+
+                <button type="button" onclick="askQuickQuestion('इस बिज़नेस के लिए लोन कैसे मिलेगा?')">
+
+                    लोन की जानकारी
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= INPUT ================= -->
+
+            <div class="chat-input-area">
+
+                <input type="text" id="userQuestion" placeholder="अपना सवाल यहाँ लिखें..."
+                    onkeydown="if(event.key === 'Enter') sendAIMessage()">
+
+
+                <button type="button" onclick="sendAIMessage()">
+
+                    भेजें / Send
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULT ================= -->
+
+        <section id="featureResult" class="result-card hidden">
+
+            <h2 id="featureTitle"></h2>
+
+            <div id="featureText"></div>
+
+            <button type="button" onclick="goBack()">
+
+                Back to Dashboard
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Udyam Yukti |
+        For Rural Entrepreneurs
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <!-- Floating Voice Assistant -->
+    <button type="button" class="floating-mic" onclick="startVoiceAssistant()" aria-label="Voice Assistant">
+
+        <dotlottie-wc src="voice-assistant.lottie" autoplay loop>
+        </dotlottie-wc>
+
+    </button>
+
+</body>
+
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Udyam Yukti - Create Account</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-card">
+
+            <div class="logo-icon">
+                <img src="logo.png" alt="Udyam Yukti Logo">
+            </div>
+
+            <p class="subtitle">
+                ग्रामीण उद्यमियों का स्मार्ट साथी
+            </p>
+
+            <h2>खाता बनाएं</h2>
+
+            <p class="login-text">
+                अपनी जानकारी भरें ताकि हम आपके लिए सही सलाह दे सकें।
+            </p>
+
+
+            <form onsubmit="registerUser(event)">
+
+                <!-- Full Name -->
+
+                <label for="fullName">
+                    पूरा नाम / Full Name
+                </label>
+
+                <input type="text" id="fullName" placeholder="अपना नाम लिखें" required />
+
+
+                <!-- Age -->
+
+                <label for="age">
+                    उम्र / Age
+                </label>
+
+                <input type="number" id="age" placeholder="अपनी उम्र लिखें" min="18" max="100" required />
+
+
+                <!-- State -->
+
+                <label for="state">
+                    राज्य चुनें / Select State
+                </label>
+
+                <select id="state" required>
+
+                    <option value="">
+                        अपना राज्य चुनें
+                    </option>
+
+                    <option value="Andhra Pradesh">आंध्र प्रदेश</option>
+                    <option value="Arunachal Pradesh">अरुणाचल प्रदेश</option>
+                    <option value="Assam">असम</option>
+
+                    <option value="Bihar">
+                        बिहार
+                    </option>
+
+                    <option value="Chhattisgarh">छत्तीसगढ़</option>
+                    <option value="Goa">गोवा</option>
+                    <option value="Gujarat">गुजरात</option>
+                    <option value="Haryana">हरियाणा</option>
+                    <option value="Himachal Pradesh">हिमाचल प्रदेश</option>
+                    <option value="Jharkhand">झारखंड</option>
+                    <option value="Karnataka">कर्नाटक</option>
+                    <option value="Kerala">केरल</option>
+                    <option value="Madhya Pradesh">मध्य प्रदेश</option>
+                    <option value="Maharashtra">महाराष्ट्र</option>
+                    <option value="Manipur">मणिपुर</option>
+                    <option value="Meghalaya">मेघालय</option>
+                    <option value="Mizoram">मिजोरम</option>
+                    <option value="Nagaland">नागालैंड</option>
+                    <option value="Odisha">ओडिशा</option>
+                    <option value="Punjab">पंजाब</option>
+                    <option value="Rajasthan">राजस्थान</option>
+                    <option value="Sikkim">सिक्किम</option>
+                    <option value="Tamil Nadu">तमिलनाडु</option>
+                    <option value="Telangana">तेलंगाना</option>
+                    <option value="Tripura">त्रिपुरा</option>
+                    <option value="Uttar Pradesh">उत्तर प्रदेश</option>
+                    <option value="Uttarakhand">उत्तराखंड</option>
+                    <option value="West Bengal">पश्चिम बंगाल</option>
+
+                </select>
+
+
+                <!-- District -->
+
+                <label for="district">
+                    जिला / District
+                </label>
+
+                <select id="district" disabled>
+
+                    <option value="">
+                        पहले राज्य चुनें / Select State First
+                    </option>
+
+                </select>
+
+
+                <!-- Manual District -->
+
+                <input type="text" id="districtManual" placeholder="अपना जिला लिखें / Enter District"
+                    style="display: none;" />
+
+
+                <!-- Village -->
+
+                <label for="village">
+                    गाँव / शहर / Village
+                </label>
+
+                <input type="text" id="village" placeholder="अपने गाँव या शहर का नाम" required />
+
+
+                <!-- Business -->
+
+                <label for="business">
+                    आप कौन-सा व्यवसाय करते हैं / या करना चाहते हैं ?
+                </label>
+
+                <select id="business" required>
+
+                    <option value="">
+                        व्यवसाय चुनें / Select Business
+                    </option>
+
+                    <option>
+                        किराना दुकान / Grocery shop
+                    </option>
+
+                    <option>
+                        सिलाई / Tailoring
+                    </option>
+
+                    <option>
+                        खाने-पीने का व्यवसाय / Hotel
+                    </option>
+
+                    <option>
+                        कृषि / Agriculture
+                    </option>
+
+                    <option>
+                        हस्तशिल्प / Handicraft
+                    </option>
+
+                    <option>
+                        मोबाइल रिपेयर / Phone repairing
+                    </option>
+
+                    <option>
+                        पशुपालन / Dairy
+                    </option>
+
+                    <option>
+                        अभी व्यवसाय शुरू नहीं किया / Haven't started the business yet.
+                    </option>
+
+                    <option>
+                        अन्य / Any other
+                    </option>
+
+                </select>
+
+
+                <!-- Mobile -->
+
+                <label for="registerMobile">
+                    मोबाइल नंबर / Mobile no.
+                </label>
+
+                <input type="tel" id="registerMobile" placeholder="10 अंकों का मोबाइल नंबर" maxlength="10" required />
+
+
+                <!-- Password -->
+
+                <label for="registerPassword">
+                    पासवर्ड बनाएं / Create Password
+                </label>
+
+                <input type="password" id="registerPassword" placeholder="कम से कम 4 अक्षर" required />
+
+
+                <button type="submit">
+                    खाता बनाएं / Create Account
+                </button>
+
+            </form>
+
+
+            <p id="registerMessage"></p>
+
+
+            <p class="signup-text">
+                पहले से खाता है?
+                <a href="index.html">लॉगिन करें</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        /* =========================================
+           BIHAR DISTRICTS
+        ========================================= */
+
+        const biharDistricts = [
+            "Araria",
+            "Arwal",
+            "Aurangabad",
+            "Banka",
+            "Begusarai",
+            "Bhagalpur",
+            "Bhojpur",
+            "Buxar",
+            "Darbhanga",
+            "East Champaran",
+            "Gaya",
+            "Gopalganj",
+            "Jamui",
+            "Jehanabad",
+            "Kaimur",
+            "Katihar",
+            "Khagaria",
+            "Kishanganj",
+            "Lakhisarai",
+            "Madhepura",
+            "Madhubani",
+            "Munger",
+            "Muzaffarpur",
+            "Nalanda",
+            "Nawada",
+            "Patna",
+            "Purnia",
+            "Rohtas",
+            "Saharsa",
+            "Samastipur",
+            "Saran",
+            "Sheikhpura",
+            "Sheohar",
+            "Sitamarhi",
+            "Siwan",
+            "Supaul",
+            "Vaishali",
+            "West Champaran"
+        ];
+
+
+        /* =========================================
+           ELEMENTS
+        ========================================= */
+
+        const stateSelect = document.getElementById("state");
+        const districtSelect = document.getElementById("district");
+        const districtManual = document.getElementById("districtManual");
+
+
+        /* =========================================
+           STATE CHANGE
+        ========================================= */
+
+        stateSelect.addEventListener("change", function () {
+
+            const selectedState = stateSelect.value;
+
+
+            /* ---------- BIHAR ---------- */
+
+            if (selectedState === "Bihar") {
+
+                districtSelect.style.display = "block";
+                districtSelect.disabled = false;
+                districtSelect.required = true;
+
+                districtManual.style.display = "none";
+                districtManual.disabled = true;
+                districtManual.required = false;
+                districtManual.value = "";
+
+
+                districtSelect.innerHTML = "";
+
+                const firstOption = document.createElement("option");
+
+                firstOption.value = "";
+                firstOption.textContent =
+                    "अपना जिला चुनें / Select District";
+                firstOption.disabled = true;
+                firstOption.selected = true;
+
+                districtSelect.appendChild(firstOption);
+
+
+                biharDistricts.forEach(function (district) {
+
+                    const option = document.createElement("option");
+
+                    option.value = district;
+                    option.textContent = district;
+
+                    districtSelect.appendChild(option);
+
+                });
+
+            }
+
+
+            /* ---------- OTHER STATE ---------- */
+
+            else if (selectedState !== "") {
+
+                districtSelect.style.display = "none";
+                districtSelect.disabled = true;
+                districtSelect.required = false;
+                districtSelect.value = "";
+
+
+                districtManual.style.display = "block";
+                districtManual.disabled = false;
+                districtManual.required = true;
+                districtManual.value = "";
+
+            }
+
+
+            /* ---------- NO STATE ---------- */
+
+            else {
+
+                districtSelect.style.display = "block";
+                districtSelect.disabled = true;
+                districtSelect.required = false;
+
+                districtSelect.innerHTML = `
+                <option value="">
+                    पहले राज्य चुनें / Select State First
+                </option>
+            `;
+
+
+                districtManual.style.display = "none";
+                districtManual.disabled = true;
+                districtManual.required = false;
+                districtManual.value = "";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
