@@ -2546,3 +2546,76 @@ body {
     height: 80px;
     object-fit: contain;
 }
+/* =========================================
+   LEAF DESIGN - FULL LEFT SIDEBAR
+========================================= */
+
+.sidebar {
+    position: fixed;
+    overflow: hidden;
+
+    /* Green + full leaf background */
+    background-color: #234b3e;
+    background-image:
+        linear-gradient(rgba(35, 75, 62, 0.86),
+            rgba(35, 75, 62, 0.86)),
+        url("vecteezy_vector-aesthetic-leaf-background_17088666.svg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Sidebar content leaf ke upar rahe */
+
+.sidebar>* {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   REMOVE OLD LEAF LAYER
+========================================= */
+
+.sidebar::after {
+    display: none;
+}
+
+
+/* =========================================
+   DO NOT AFFECT WHOLE PAGE
+========================================= */
+
+body>* {
+    position: static;
+}
+
+/* =========================================
+   LEAF DESIGN - TOP GREEN HEADER
+========================================= */
+
+.navbar {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #234b3e;
+
+    background-image:
+        linear-gradient(rgba(35, 75, 62, 0.86),
+            rgba(35, 75, 62, 0.86)),
+        url("vecteezy_abstract-glowing-circle-lines-on-dark_23811268.svg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Header ka content leaf ke upar rahe */
+
+.navbar>* {
+    position: relative;
+    z-index: 2;
+}
